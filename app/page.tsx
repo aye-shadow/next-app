@@ -14,7 +14,7 @@ interface Product {
   };
 }
 
-const Products = async () => {
+const page = async () => {
   const res = await fetch("https://fakestoreapi.com/products");
   const products: Product[] = await res.json();
 
@@ -29,4 +29,4 @@ const Products = async () => {
   );
 };
 
-export default Products;
+export default page;

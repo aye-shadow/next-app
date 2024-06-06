@@ -31,7 +31,7 @@ const ProductsCard = ({
         <div className="w-full h-full flex flex-col p-0 m-0 text-xs justify-between font-sans">
           <section>
             <div className="min-h-48 rounded-lg relative overflow-hidden">
-              <ProductCardImage data={data.image} />
+              <ProductCardImage data={data} />
             </div>
             <h1 className="font-bold text-sm cursor-pointer hover:text-zinc-700 hover:underline hover:underline-offset-1">
               {data.title}

@@ -2,11 +2,19 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const ProductCardImage = ({ data }: { data: string }) => {
+const ProductCardImage = ({
+  data,
+}: {
+  data: {
+    id: number;
+    title: string;
+    image: string;
+  };
+}) => {
   return (
-    <Link href="/ProductDetails">
+    <Link href={`/Product?id=${data.id}`} key={data.id}>
       <Image
-        src={data}
+        src={data.image}
         alt="Product Image"
         className="hover:scale-105 duration-200 cursor-pointer"
         fill={true}
