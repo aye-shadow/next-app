@@ -7,13 +7,15 @@ import Categories from "./Categories";
 const Header = () => {
   return (
     <nav className="flex justify-between bg-slate-00 relative py-4 px-16 pb-8">
-      <span className="font-bold font-serif pt-4 cursor-pointer">Ecommerce</span>
+      <span className="font-bold font-serif pt-4 cursor-pointer">
+        Ecommerce
+      </span>
       <ul className="flex gap-4 font-sans text-xs pt-4">
         {/*categories */}
-        <Categories data={{text: "Electronics"}}></Categories>
-        <Categories data={{text: "Mens Fashion"}}></Categories>
-        <Categories data={{text: "Women's Fashion"}}></Categories>
-        <Categories data={{text: "Jewelry"}}></Categories>
+        <Categories data={{ text: "Electronics" }}></Categories>
+        <Categories data={{ text: "Mens Fashion" }}></Categories>
+        <Categories data={{ text: "Women's Fashion" }}></Categories>
+        <Categories data={{ text: "Jewelry" }}></Categories>
       </ul>
 
       {/* search bar */}
