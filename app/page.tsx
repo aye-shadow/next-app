@@ -1,15 +1,32 @@
-import Header from "../components/MainComponents/Header";
-import Products from "./Products";
+import React from "react";
+import ProductsCard from "./_components/_ProductsComponents/ProductsCard";
 
-export default function Home() {
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+  category: string;
+  description: string;
+  image: string;
+  rating: {
+    rate: number;
+    count: number;
+  };
+}
+
+const Products = async () => {
+  const res = await fetch("https://fakestoreapi.com/products");
+  const products: Product[] = await res.json();
+
   return (
     <>
-      <body>
-        <Header />
-        <main className="px-16 py-8">
-          <Products />
-        </main>
-      </body>
+      <div className="grid grid-flow-row grid-cols-4 gap-4">
+        {products.map((product) => (
+          <ProductsCard key={product.id} data={product}></ProductsCard>
+        ))}
+      </div>
     </>
   );
-}
+};
+
+export default Products;

@@ -1,7 +1,6 @@
 import React from "react";
 // import StockImage from "../StockImage.jpg";
 import { ShoppingCart } from "lucide-react";
-import { Switch, Typography } from "antd";
 import Paragraph from "antd/es/typography/Paragraph";
 import ProductCardImage from "./ProductCardImage";
 
