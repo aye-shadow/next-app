@@ -14,10 +14,10 @@ const ProductsCard = ({
     category: string;
     description: string;
     image: string;
-    rating: {
-      rate: number;
-      count: number;
-    };
+    // rating: {
+    //   rate: number;
+    //   count: number;
+    // };
   };
 }) => {
   return (

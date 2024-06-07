@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <>
       <html lang="en" data-theme="dark">
-        <body>
+        <body className="min-h-screen h-auto">
           <Header />
           <main className="px-16 py-8">{children}</main>
         </body>
