@@ -17,7 +17,7 @@ const SearchBar = () => {
     });
   };
 
-  const queryLink = `/Search?query=${searchQuery}`;
+  const queryLink = `/search?query=${searchQuery}`;
 
   return (
     <>
@@ -38,7 +38,7 @@ const SearchBar = () => {
         disabled={isSearching}
       />
       <button>
-        <Link href={queryLink === "/Search?query=" ? "#" : queryLink}>
+        <Link href={queryLink === "/search?query=" ? "#" : queryLink}>
           {isSearching ? (
             <Loader2 size={18} className="animate-spin" />
           ) : (

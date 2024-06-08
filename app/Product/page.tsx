@@ -16,7 +16,7 @@ interface Product {
   // };
 }
 
-const page = async ({ params, searchParams }: any) => {
+const page = async ({ searchParams }: any) => {
   const res = await fetch(
     `https://fakestoreapi.com/products/${searchParams.id}`
   );

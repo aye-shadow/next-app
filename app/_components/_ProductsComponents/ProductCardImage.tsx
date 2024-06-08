@@ -12,7 +12,7 @@ const ProductCardImage = ({
   };
 }) => {
   return (
-    <Link href={`/Product?id=${data.id}`} key={data.id}>
+    <Link href={`/product?id=${data.id}`} key={data.id}>
       <Image
         src={data.image}
         alt="Product Image"

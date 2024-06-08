@@ -11,17 +11,16 @@ const Header = () => {
         Ecommerce
       </Link>
       <ul className="flex gap-4 font-sans text-xs pt-4">
-        {/*categories */}
-        <Link href="/Electronics">
+        <Link href="/category/electronics">
           <Categories data={{ text: "Electronics" }}></Categories>
         </Link>
-        <Link href="/MensFashion">
+        <Link href="/category/mensclothing">
           <Categories data={{ text: "Mens Fashion" }}></Categories>
         </Link>
-        <Link href="/WomensFashion">
+        <Link href="/category/womensclothing">
           <Categories data={{ text: "Women's Fashion" }}></Categories>
         </Link>
-        <Link href="/Jewelry">
+        <Link href="/category/jewelery">
           <Categories data={{ text: "Jewelry" }}></Categories>
         </Link>
       </ul>
@@ -33,7 +32,7 @@ const Header = () => {
 
       {/* shopping cart */}
       <Link
-        href="/ShoppingCart"
+        href="/cart"
         className="cursor-pointer bg-black flex align-middle text-white px-7 rounded-xl pt-2 gap-2 text-sm mt-1"
       >
         <p>0</p>
