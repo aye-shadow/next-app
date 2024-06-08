@@ -13,13 +13,16 @@ const ProductCardImage = ({
 }) => {
   return (
     <Link href={`/product?id=${data.id}`} key={data.id}>
-      <Image
-        src={data.image}
-        alt="Product Image"
-        className="hover:scale-105 duration-200 cursor-pointer"
-        fill={true}
-        objectFit="contain"
-      />
+      <div className="h-48 min-h-48 rounded-lg relative overflow-hidden">
+        <Image
+          src={data.image}
+          alt="Product Image"
+          className="hover:scale-105 duration-200 cursor-pointer object-contain"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority={false}
+        />
+      </div>
     </Link>
   );
 };
