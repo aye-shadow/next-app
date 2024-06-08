@@ -62,7 +62,7 @@ const page = async ({ params, searchParams }: any) => {
               data={{ title: "Description:", text: product.description }}
             />
             <SingleProductContainers
-              data={{ title: "Price", text: `Rs.${product.price}` }}
+              data={{ title: "Price", text: `$${product.price}` }}
             />
             <button
               className="btn w-full bg-black text-white thin hover:bg-zinc-800 duration-200 rounded-xl"

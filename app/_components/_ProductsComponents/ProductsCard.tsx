@@ -48,7 +48,7 @@ const ProductsCard = ({
             <div className="mt-2 mb-4">
               Price:
               <div className="font-bold font-serif text-sm inline pl-1">
-                Rs.{data.price}
+                ${data.price}
               </div>
             </div>
             <button
