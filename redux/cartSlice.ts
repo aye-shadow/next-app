@@ -26,7 +26,15 @@ const cartSlice = createSlice({
       }
     },
     remove(state, action: PayloadAction<{ id: number }>) {
-      return state.filter((item) => item.id !== action.payload.id);
+      const idToRemove = action.payload.id;
+      const existingItemIndex = state.findIndex(item => item.id === idToRemove);
+
+      if (existingItemIndex !== -1) {
+        state[existingItemIndex].quantity -= 1;
+        if (state[existingItemIndex].quantity === 0) {
+          state.splice(existingItemIndex, 1);
+        }
+      }
     }
   }
 });
@@ -36,7 +44,8 @@ export const selectTotalItems = (state: RootState) => {
 };
 
 export const selectTotalPrice = (state: RootState) => {
-  return state.cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  const totalPrice = state.cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  return totalPrice.toFixed(2); // Limiting the result to 2 decimal places
 };
 
 export const { add, remove } = cartSlice.actions;

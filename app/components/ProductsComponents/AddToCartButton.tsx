@@ -30,7 +30,7 @@ const AddToCartButton = ({ product, children }: AddToCartProps) => {
 
   return (
     <button
-      className="btn w-full bg-black text-white thin hover:bg-zinc-800 duration-200 rounded-xl"
+      className="btn w-full bg-black text-white thin rounded-xl hover:bg-zinc-800 duration-200"
       style={{ fontSize: "0.7rem" }}
       onClick={() => handleAdd(product)}
     >

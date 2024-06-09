@@ -1,4 +1,4 @@
-import ProductsCard from "@/app/_components/_ProductsComponents/ProductsCard";
+import ProductsCard from "@/app/components/ProductsComponents/ProductsCard";
 import React from "react";
 
 interface Product {
@@ -10,11 +10,7 @@ interface Product {
   image: string;
 }
 
-const DisplayElement = async ({
-  data,
-}: {
-  data: string;
-}) => {
+const DisplayElement = async ({ data }: { data: string }) => {
   const res = await fetch(data);
   const products: Product[] = await res.json();
 

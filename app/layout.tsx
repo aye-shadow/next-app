@@ -1,5 +1,5 @@
 import "./globals.css";
-import Header from "./_components/_MainComponents/Header";
+import Header from "./components/MainComponents/Header";
 import { ReactNode } from "react";
 import OurProvider from "@/redux/ourProvider";
 

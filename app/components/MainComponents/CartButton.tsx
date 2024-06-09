@@ -12,12 +12,11 @@ const CartButton = () => {
   const totalItems = useSelector(selectTotalItems);
 
   return (
-    <Link
-      href="/cart"
-      className="cursor-pointer bg-black flex align-middle text-white px-7 rounded-xl pt-2 gap-2 text-sm mt-1"
-    >
-      <p>{totalItems}</p>
-      <ShoppingCart size={18} />
+    <Link href="/cart">
+      <button className="bg-black flex flex-row align-middle text-white px-7 rounded-xl pt-2 gap-2 text-sm mt-1 h-full hover:bg-zinc-800 duration-200">
+        <p>{totalItems}</p>
+        <ShoppingCart size={18} />
+      </button>
     </Link>
   );
 };

@@ -40,7 +40,7 @@ const page = () => {
               <h2 className="font-semibold h-fit">${item.price}</h2>
               <div className="text-inherit flex gap-4 h-fit">
                 <button
-                  className="bg-slate-950 rounded-md text-white w-fit h-fit"
+                  className="bg-slate-950 rounded-md text-white w-fit h-fit hover:bg-zinc-800 duration-200"
                   style={{ padding: "0.25rem 0.4rem" }}
                   onClick={() => handleRemove(item.id)}
                 >
@@ -48,7 +48,7 @@ const page = () => {
                 </button>
                 <div className="text-sm">{item.quantity}</div>
                 <button
-                  className="bg-slate-950 rounded-md text-white w-fit h-fit"
+                  className="bg-slate-950 rounded-md text-white w-fit h-fit hover:bg-zinc-800 duration-200"
                   style={{ padding: "0.25rem 0.4rem" }}
                   onClick={() => handleAdd(item)}
                 >
@@ -84,7 +84,7 @@ const page = () => {
               Total <span>${totalPrice}</span>
             </h2>
             <button
-              className="btn w-full bg-black text-white thin hover:bg-zinc-800 duration-200 rounded-2xl"
+              className="btn w-full bg-black text-white thin rounded-2xl hover:bg-zinc-800 duration-200"
               style={{ fontSize: "0.7rem" }}
             >
               Checkout

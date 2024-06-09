@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import SingleProductContainers from "../_components/_ProductsComponents/SingleProductContainers";
-import AddToCartButton from "../_components/_ProductsComponents/AddToCartButton";
+import SingleProductContainers from "../components/ProductsComponents/SingleProductContainers";
+import AddToCartButton from "../components/ProductsComponents/AddToCartButton";
 
 interface Product {
   id: number;
