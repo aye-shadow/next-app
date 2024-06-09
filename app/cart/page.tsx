@@ -1,5 +1,5 @@
-import { Minus, Plus, X } from "lucide-react";
-import Image from "next/image";
+"use client";
+import { Minus, Plus } from "lucide-react";
 import React from "react";
 
 const page = () => {
@@ -8,19 +8,25 @@ const page = () => {
       <h2 className="font-bold font-sans text-lg mb-10">Your Cart</h2>
 
       <div
-        className="card w-fill min-h-36 bg-white grid grid-cols-4 grid-flow-row font-sans"
+        className="card w-fill h-36 bg-white flex flex-row justify-between font-sans overflow-hidden items-center px-10"
         style={{ boxShadow: "5px 10px 20px rgb(0 0 0 / 0.1)" }}
       >
         <img></img>
-        <h2 className="font-semibold">Test Product</h2>
-        <h2 className="font-semibold">$20</h2>
-        <div className="text-inherit">
-          <button>
-            <Minus />
+        <h2 className="font-semibold h-fit">Test Product</h2>
+        <h2 className="font-semibold h-fit">$20</h2>
+        <div className="text-inherit flex gap-4 h-fit">
+          <button
+            className="bg-slate-950 rounded-md text-white w-fit h-fit"
+            style={{ padding: "0.25rem 0.4rem" }}
+          >
+            <Minus size={13} />
           </button>
-          Quantity
-          <button>
-            <Plus />
+          <div className="text-sm">{1}</div>
+          <button
+            className="bg-slate-950 rounded-md text-white w-fit h-fit"
+            style={{ padding: "0.25rem 0.4rem" }}
+          >
+            <Plus size={13} />
           </button>
         </div>
       </div>

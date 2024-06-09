@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import SingleProductContainers from "../_components/_ProductsComponents/SingleProductContainers";
-import AddToCart from "../_components/_ProductsComponents/AddToCart";
+import AddToCartButton from "../_components/_ProductsComponents/AddToCartButton";
 
 interface Product {
   id: number;
@@ -11,10 +11,6 @@ interface Product {
   category: string;
   description: string;
   image: string;
-  // rating: {
-  //   rate: number;
-  //   count: number;
-  // };
 }
 
 const page = async ({ searchParams }: any) => {
@@ -65,7 +61,7 @@ const page = async ({ searchParams }: any) => {
             <SingleProductContainers
               data={{ title: "Price", text: `$${product.price}` }}
             />
-            <AddToCart />
+            <AddToCartButton product={product} />
           </div>
         </div>
       </div>

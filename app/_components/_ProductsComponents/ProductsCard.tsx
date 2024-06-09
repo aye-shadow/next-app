@@ -1,9 +1,8 @@
 import React from "react";
-// import StockImage from "../StockImage.jpg";
 import { ShoppingCart } from "lucide-react";
 import Paragraph from "antd/es/typography/Paragraph";
 import ProductCardImage from "./ProductCardImage";
-import AddToCart from "./AddToCart";
+import AddToCart from "./AddToCartButton";
 
 const ProductsCard = ({
   data,
@@ -15,10 +14,6 @@ const ProductsCard = ({
     category: string;
     description: string;
     image: string;
-    // rating: {
-    //   rate: number;
-    //   count: number;
-    // };
   };
 }) => {
   return (
@@ -50,7 +45,7 @@ const ProductsCard = ({
                 ${data.price}
               </div>
             </div>
-            <AddToCart>
+            <AddToCart product={data}>
               <ShoppingCart size={15} />
             </AddToCart>
           </section>

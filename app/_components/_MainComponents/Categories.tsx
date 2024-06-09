@@ -15,6 +15,7 @@ const Categories = ({ data }: { data: category }) => {
 
   return (
     <li
+      key={data.id}
       className={`hover:font-semibold cursor-pointer ${
         pathname === data.link ? "font-semibold" : ""
       }`}

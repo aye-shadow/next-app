@@ -1,8 +1,9 @@
 import React from "react";
-import { ShoppingCart } from "lucide-react";
 import SearchBar from "./SearchBar";
 import Categories from "./Categories";
 import Link from "next/link";
+
+import Cart from "./Cart";
 
 const encodeURL = (data: string) => {
   return data.replace(/ /g, "%20");
@@ -53,13 +54,7 @@ const Header = () => {
         </span>
 
         {/* shopping cart */}
-        <Link
-          href="/cart"
-          className="cursor-pointer bg-black flex align-middle text-white px-7 rounded-xl pt-2 gap-2 text-sm mt-1"
-        >
-          <p>0</p>
-          <ShoppingCart size={18} />
-        </Link>
+        <Cart />
       </nav>
     </>
   );
