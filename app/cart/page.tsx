@@ -2,18 +2,22 @@
 
 import { Minus, Plus } from "lucide-react";
 import React from "react";
-import { remove } from "@/redux/cartSlice";
+import { remove, add, selectTotalPrice } from "@/redux/cartSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/redux/store";
-import Image from "next/image";
-import AddToCartButton from "../_components/_ProductsComponents/AddToCartButton";
+import { CartItem } from "@/redux/cartSlice";
 
 const page = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cart);
+  const totalPrice = useSelector(selectTotalPrice);
 
   const handleRemove = (id: number) => {
     dispatch(remove({ id }));
+  };
+
+  const handleAdd = (item: CartItem) => {
+    dispatch(add(item));
   };
 
   return (
@@ -42,10 +46,11 @@ const page = () => {
                 >
                   <Minus size={13} />
                 </button>
-                <div className="text-sm">{1}</div>
+                <div className="text-sm">{item.quantity}</div>
                 <button
                   className="bg-slate-950 rounded-md text-white w-fit h-fit"
                   style={{ padding: "0.25rem 0.4rem" }}
+                  onClick={() => handleAdd(item)}
                 >
                   <Plus size={13} />
                 </button>
@@ -66,7 +71,9 @@ const page = () => {
               >
                 <p>
                   {item.title}
-                  <span className="text-zinc-400 pl-2 font-normal">X{item.quantity}</span>
+                  <span className="text-zinc-400 pl-2 font-normal">
+                    X{item.quantity}
+                  </span>
                 </p>
                 <p>${item.price}</p>
               </div>
@@ -74,7 +81,7 @@ const page = () => {
           </div>
           <div>
             <h2 className="text-base mb-3 flex flex-row justify-between mt-4">
-              Total <span>$60</span>
+              Total <span>${totalPrice}</span>
             </h2>
             <button
               className="btn w-full bg-black text-white thin hover:bg-zinc-800 duration-200 rounded-2xl"
