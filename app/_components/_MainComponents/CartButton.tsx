@@ -6,7 +6,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 
-const Cart = () => {
+const CartButton = () => {
   const item = useSelector((state: RootState) => state.cart);
 
   return (
@@ -20,4 +20,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default CartButton;

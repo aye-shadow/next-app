@@ -2,8 +2,7 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import Categories from "./Categories";
 import Link from "next/link";
-
-import Cart from "./Cart";
+import CartButton from "./CartButton";
 
 const encodeURL = (data: string) => {
   return data.replace(/ /g, "%20");
@@ -40,11 +39,7 @@ const Header = () => {
               link: encodeURL("/category/jewelery"),
             },
           ].map((category) => {
-            return (
-              <>
-                <Categories key={category.id} data={category} />
-              </>
-            );
+            return <Categories key={category.id} data={category} />;
           })}
         </ul>
 
@@ -53,8 +48,7 @@ const Header = () => {
           <SearchBar />
         </span>
 
-        {/* shopping cart */}
-        <Cart />
+        <CartButton />
       </nav>
     </>
   );

@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 interface category {
-  id: number;
   name: string;
   link: string;
 }
@@ -15,7 +14,6 @@ const Categories = ({ data }: { data: category }) => {
 
   return (
     <li
-      key={data.id}
       className={`hover:font-semibold cursor-pointer ${
         pathname === data.link ? "font-semibold" : ""
       }`}
