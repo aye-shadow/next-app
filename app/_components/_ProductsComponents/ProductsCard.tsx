@@ -3,6 +3,7 @@ import React from "react";
 import { ShoppingCart } from "lucide-react";
 import Paragraph from "antd/es/typography/Paragraph";
 import ProductCardImage from "./ProductCardImage";
+import AddToCart from "./AddToCart";
 
 const ProductsCard = ({
   data,
@@ -49,13 +50,9 @@ const ProductsCard = ({
                 ${data.price}
               </div>
             </div>
-            <button
-              className="btn w-full bg-black text-white thin hover:bg-zinc-800 duration-200"
-              style={{ fontSize: "0.7rem" }}
-            >
-              Buy Now
+            <AddToCart>
               <ShoppingCart size={15} />
-            </button>
+            </AddToCart>
           </section>
         </div>
       </div>

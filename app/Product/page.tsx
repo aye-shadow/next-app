@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import SingleProductContainers from "../_components/_ProductsComponents/SingleProductContainers";
+import AddToCart from "../_components/_ProductsComponents/AddToCart";
 
 interface Product {
   id: number;
@@ -64,12 +65,7 @@ const page = async ({ searchParams }: any) => {
             <SingleProductContainers
               data={{ title: "Price", text: `$${product.price}` }}
             />
-            <button
-              className="btn w-full bg-black text-white thin hover:bg-zinc-800 duration-200 rounded-xl"
-              style={{ fontSize: "0.7rem" }}
-            >
-              Buy Now
-            </button>
+            <AddToCart />
           </div>
         </div>
       </div>
